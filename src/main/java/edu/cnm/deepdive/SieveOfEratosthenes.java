@@ -3,8 +3,16 @@ package edu.cnm.deepdive;
 
 import java.util.ArrayList;
 
+/**
+ * Use the Sieve of Eratosthenes algorithm to find prime numbers.
+ */
 public class SieveOfEratosthenes {
 
+  /**
+   * Determine which values are primes (true) and which are not (false) from 0 to some number.
+   * @param endValue The highest number to evaluate.
+   * @return A boolean array from 0 to endValue inclusive. The indices represent the number value.
+   */
   public boolean[] getAll(int endValue) {
     // 1. Write down all of the positive integers from 2 to the upper limit of the given range of
     //    numbers, in order
@@ -34,6 +42,11 @@ public class SieveOfEratosthenes {
     return primes;
   }
 
+  /**
+   * Get a list of all prime numbers between 0 and some number.
+   * @param endValue The highest number to evaluate.
+   * @return A list of prime numbers.
+   */
   public ArrayList<Integer> getPrimes(int endValue) {
     ArrayList<Integer> onlyPrimes = new ArrayList<>();
     boolean[] allPrimes = getAll(endValue);

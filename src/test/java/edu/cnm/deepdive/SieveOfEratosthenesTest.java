@@ -68,10 +68,11 @@ class SieveOfEratosthenesTest {
   @Test
   void getAll() {
     boolean[] sieveValues = sieve.getAll(50);
+    System.out.println("Testing .getAll() method...");
     for (int i = 0; i < sieveValues.length; i++) {
       boolean expected = testCaseAll[i];
       boolean actual = sieveValues[i];
-      System.out.printf("NUMBER: %d; EXPECTED: %s; ACTUAL: %s%n", i, expected, actual);
+      System.out.printf("[%d] EXPECTED: %s; ACTUAL: %s%n", i, expected, actual);
       assertEquals(expected, actual);
     }
 
@@ -80,6 +81,7 @@ class SieveOfEratosthenesTest {
   @Test
   void getPrimes() {
     ArrayList<Integer> sieveValues = sieve.getPrimes(50);
+    System.out.println("Testing .getPrimes() method...");
     for (int i = 0; i < sieveValues.size(); i++) {
       Integer expected = testCasePrimes[i];
       Integer actual = sieveValues.get(i);
